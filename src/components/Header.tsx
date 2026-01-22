@@ -34,11 +34,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Sparkles className="w-6 h-6 text-pink-600" fill="#E91E63" />
-            <a href='inicio'>
-              <h1 className="text-2xl font-bold text-gray-900">
-              Pau <span className="text-pink-600">Depilación</span>
-            </h1>
-            </a>
+              <button 
+                onClick={() => scrollToSection('inicio')} 
+                className="text-2xl font-bold text-gray-900 hover:opacity-80 transition-opacity focus:outline-none"
+              >
+                Pau <span className="text-pink-600">Depilación</span>
+              </button>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
