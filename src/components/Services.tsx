@@ -9,22 +9,25 @@ const Services = () => {
       icon: Sparkles,
       title: 'Depilación Corporal',
       description: 'Depilación con cera profesional de calidad para piernas, axilas, rebaje brasilero y más.',
-      features: ['Axilas', 'Piernas completas', 'Rebaje brasilero', 'Media pierna', 'Brazos'],
-      image: 'https://images.pexels.com/photos/3997992/pexels-photo-3997992.jpeg?auto=compress&cs=tinysrgb&w=800',
+      features: ['Axilas', 'Piernas completas', 'Rebaje completo', 'Rostro', 'Brazos'],
+      image: 'https://images.pexels.com/photos/9486632/pexels-photo-9486632.jpeg?auto=compress&cs=tinysrgb&w=800',
+      position: 'object-[25%_50%]',
     },
     {
       icon: Eye,
       title: 'Lifting de Pestañas',
       description: 'Realza tu mirada con nuestro servicio de lifting y tinte de pestañas profesional.',
       features: ['Lifting profesional', 'Tinte incluido', 'Duración 4-5 semanas', 'Mirada natural'],
-      image: 'https://images.pexels.com/photos/3997987/pexels-photo-3997987.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/16465588/pexels-photo-16465588.jpeg?auto=compress&cs=tinysrgb&w=800',
+      position: 'object-[0%_25%]'
     },
     {
       icon: Package,
       title: 'Promociones',
-      description: 'Packs especiales combinando servicios para un cuidado completo.',
-      features: ['Pack Depilación', 'Promociones especiales', 'Pide tu descuento por tu Cumpleaños'],
-      image: 'https://images.pexels.com/photos/3997986/pexels-photo-3997986.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Oferta especial por tu día de cumpleaños!.',
+      features: ['Pide tu descuento por tu Cumpleaños', '15% de DSCTO'],
+      image: 'https://images.pexels.com/photos/7019699/pexels-photo-7019699.jpeg?auto=compress&cs=tinysrgb&w=800',
+      position: 'object-[0%_25%]',
     },
   ];
 
@@ -61,11 +64,11 @@ const Services = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 md:h-64 overflow-hidden bg-pink-100">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className={`w-full h-full object-cover ${service.position}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">

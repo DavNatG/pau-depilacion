@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Instagram, Clock, Sparkles } from 'lucide-react';
+import { MapPin, Instagram, Clock, Feather } from 'lucide-react';
 
 const ContactFooter = () => {
   const whatsappNumber = '56994117532';
@@ -133,7 +133,7 @@ const ContactFooter = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Sparkles className="w-6 h-6 text-pink-600" fill="#E91E63" />
+                <Feather className="w-8 h-8 text-pink-600" />
                 <h3 className="text-2xl font-bold">Pau Depilación</h3>
               </div>
               <p className="text-gray-400">

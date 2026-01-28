@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X, Feather } from 'lucide-react';
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Sparkles className="w-6 h-6 text-pink-600" fill="#E91E63" />
+            <Feather className="w-8 h-8 text-pink-600" />
               <button 
                 onClick={() => scrollToSection('inicio')} 
                 className="text-2xl font-bold text-gray-900 hover:opacity-80 transition-opacity focus:outline-none"
@@ -54,6 +55,13 @@ const Header = () => {
               className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
             >
               Servicios
+            </button>
+            
+            <button
+              onClick={() => scrollToSection('resenas')}
+              className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
+            >
+              Reseñas
             </button>
             <button
               onClick={() => scrollToSection('ubicacion')}
@@ -98,6 +106,13 @@ const Header = () => {
               className="block w-full text-left text-gray-700 hover:text-pink-600 transition-colors font-medium"
             >
               Servicios
+            </button>
+
+            <button
+              onClick={() => scrollToSection('resenas')}
+              className="block w-full text-left text-gray-700 hover:text-pink-600 transition-colors font-medium"
+            >
+              Reseñas
             </button>
             <button
               onClick={() => scrollToSection('ubicacion')}
