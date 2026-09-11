@@ -56,7 +56,7 @@ const Header = () => {
               Servicios
             </button>
             <button
-              onClick={() => scrollToSection('agenda')}
+              onClick={() => scrollToSection('ubicacion')}
               className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
             >
               Agenda
@@ -81,7 +81,7 @@ const Header = () => {
               Contacto
             </button>
             <button
-              onClick={() => scrollToSection('agenda')}
+              onClick={() => scrollToSection('ubicacion')}
               className="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Agendar Hora
@@ -111,7 +111,7 @@ const Header = () => {
               Servicios
             </button>
             <button
-              onClick={() => scrollToSection('agenda')}
+              onClick={() => scrollToSection('ubicacion')}
               className="block w-full text-left text-gray-700 hover:text-pink-600 transition-colors font-medium"
             >
               Agenda
@@ -136,7 +136,7 @@ const Header = () => {
               Contacto
             </button>
             <button
-              onClick={() => scrollToSection('agenda')}
+              onClick={() => scrollToSection('ubicacion')}
               className="block w-full text-center bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors shadow-lg"
             >
               Agendar Hora

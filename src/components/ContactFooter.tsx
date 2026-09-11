@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Instagram, Clock, Feather } from 'lucide-react';
+import { MapPin, Instagram, Clock, Feather, Wallet } from 'lucide-react';
 
 const ContactFooter = () => {
   const whatsappNumber = '56994117532';
@@ -32,6 +32,19 @@ const ContactFooter = () => {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
+              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
+                <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Wallet className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-pink-600 mb-2">Se requiere abono previo</h3>
+                  <p className="text-gray-600">
+                    Todas las horas necesitan un abono para quedar confirmadas. Al reservar por
+                    WhatsApp te envío los datos para realizarlo.
+                  </p>
+                </div>
+              </div>
+
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
                 <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
@@ -86,7 +99,7 @@ const ContactFooter = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-pink-600 to-pink-700 rounded-3xl p-8 text-white shadow-2xl"
+              className="flex flex-col justify-between bg-gradient-to-br from-pink-600 to-pink-700 rounded-3xl p-8 text-white shadow-2xl"
             >
               <h3 className="text-3xl font-bold mb-6">¿Lista para tu próxima cita?</h3>
               <p className="text-pink-100 mb-8 text-lg">

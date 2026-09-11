@@ -2,7 +2,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import InfoBanner from './components/InfoBanner';
 import Services from './components/Services';
-import Agenda from './components/Agenda';
 import Testimonials from './components/Testimonials';
 import ContactFooter from './components/ContactFooter';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -14,7 +13,6 @@ function App() {
       <Hero />
       <InfoBanner />
       <Services />
-      <Agenda />
       <Testimonials />
       <ContactFooter />
       <FloatingWhatsApp />
