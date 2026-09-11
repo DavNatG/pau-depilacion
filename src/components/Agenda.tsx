@@ -50,7 +50,7 @@ const Agenda = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-4"
+            className="lg:col-span-2 flex flex-col gap-4 justify-between"
           >
             <div className="bg-gradient-to-br from-pink-600 to-pink-700 rounded-2xl p-6 text-white shadow-xl">
               <div className="flex items-start space-x-4">
@@ -107,7 +107,7 @@ const Agenda = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3 bg-white rounded-3xl shadow-2xl border border-pink-100 overflow-hidden"
           >
-            <div className="h-[1050px] lg:h-full lg:min-h-[650px]">
+            <div className="h-[1050px] lg:h-[880px]">
               <InlineWidget
                 url={CALENDLY_URL}
                 styles={{ height: '100%', width: '100%' }}
