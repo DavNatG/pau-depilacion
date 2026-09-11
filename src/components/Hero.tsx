@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-// Ya no necesitamos importar MessageCircle de lucide-react
+import { Banderines, BanderaChile } from './FiestasPatrias';
+import { esFiestasPatrias } from '../fiestasPatrias';
 
 const Hero = () => {
   const whatsappNumber = '56994117532';
@@ -9,8 +10,22 @@ const Hero = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-pink-50">
       <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      {esFiestasPatrias && <Banderines />}
+
+      <div className={`container mx-auto px-4 ${esFiestasPatrias ? 'pt-40' : 'pt-20'} pb-20 relative z-10`}>
         <div className="max-w-4xl mx-auto text-center">
+          {esFiestasPatrias && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 bg-white border border-pink-100 shadow-md rounded-full px-4 py-2 mb-6 text-sm md:text-base font-semibold text-gray-700"
+            >
+              <BanderaChile className="w-6 h-4 rounded-sm shadow-sm" />
+              <span>¡Felices Fiestas Patrias!</span>
+            </motion.div>
+          )}
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

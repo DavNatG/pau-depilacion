@@ -8,6 +8,21 @@ html {
   scroll-behavior: smooth;
 }
 
+.banderin {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: banderin 3s ease-in-out infinite;
+}
+
+@keyframes banderin {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banderin { animation: none; }
+}
+
 #servicios {
   scroll-margin-top: 10px;
 }

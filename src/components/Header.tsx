@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Feather } from 'lucide-react';
+import { FranjaTricolor } from './FiestasPatrias';
+import { esFiestasPatrias } from '../fiestasPatrias';
 
 
 const Header = () => {
@@ -22,9 +24,6 @@ const Header = () => {
     }
   };
 
-  const whatsappNumber = '56994117532';
-  const whatsappMessage = encodeURIComponent('Hola Pau, quiero agendar una hora');
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -43,7 +42,7 @@ const Header = () => {
               </button>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-5 lg:space-x-8">
             <button
               onClick={() => scrollToSection('inicio')}
               className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
@@ -56,7 +55,13 @@ const Header = () => {
             >
               Servicios
             </button>
-            
+            <button
+              onClick={() => scrollToSection('agenda')}
+              className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
+            >
+              Agenda
+            </button>
+
             <button
               onClick={() => scrollToSection('resenas')}
               className="text-gray-700 hover:text-pink-600 transition-colors font-medium"
@@ -75,14 +80,12 @@ const Header = () => {
             >
               Contacto
             </button>
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => scrollToSection('agenda')}
               className="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Agendar Hora
-            </a>
+            </button>
           </nav>
 
           <button
@@ -107,6 +110,12 @@ const Header = () => {
             >
               Servicios
             </button>
+            <button
+              onClick={() => scrollToSection('agenda')}
+              className="block w-full text-left text-gray-700 hover:text-pink-600 transition-colors font-medium"
+            >
+              Agenda
+            </button>
 
             <button
               onClick={() => scrollToSection('resenas')}
@@ -126,17 +135,16 @@ const Header = () => {
             >
               Contacto
             </button>
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => scrollToSection('agenda')}
               className="block w-full text-center bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors shadow-lg"
             >
               Agendar Hora
-            </a>
+            </button>
           </nav>
         )}
       </div>
+      {esFiestasPatrias && <FranjaTricolor />}
     </header>
   );
 };
