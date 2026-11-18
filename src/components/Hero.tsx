@@ -1,19 +1,39 @@
 import { motion } from 'framer-motion';
 import { Banderines, BanderaChile } from './FiestasPatrias';
 import { esFiestasPatrias } from '../fiestasPatrias';
+import { Nieve, Arbolito } from './Navidad';
+import { esNavidad } from '../navidad';
 
 const Hero = () => {
   const whatsappNumber = '56994117532';
   const whatsappMessage = encodeURIComponent('Hola Pau, quiero agendar una hora');
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-white to-pink-50">
+    <section
+      id="inicio"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br ${
+        esNavidad ? 'from-pink-50 via-white to-emerald-50' : 'from-pink-50 via-white to-pink-50'
+      }`}
+    >
       <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
 
       {esFiestasPatrias && <Banderines />}
+      {esNavidad && <Nieve />}
 
       <div className={`container mx-auto px-4 ${esFiestasPatrias ? 'pt-40' : 'pt-20'} pb-20 relative z-10`}>
         <div className="max-w-4xl mx-auto text-center">
+          {esNavidad && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 bg-white border border-pink-100 shadow-md rounded-full px-5 py-2 mb-6 text-sm md:text-base font-semibold text-gray-700"
+            >
+              <Arbolito className="w-5 h-5" />
+              <span>¡Felices Fiestas! Agenda tu hora</span>
+            </motion.div>
+          )}
+
           {esFiestasPatrias && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}

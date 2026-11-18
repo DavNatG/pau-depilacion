@@ -23,6 +23,34 @@ html {
   .banderin { animation: none; }
 }
 
+.luz-navidad {
+  animation: titilar 2.6s ease-in-out infinite;
+}
+
+@keyframes titilar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.copo {
+  position: absolute;
+  top: -8%;
+  line-height: 1;
+  animation-name: caer;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes caer {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  100% { transform: translate3d(var(--deriva, 0px), 112vh, 0) rotate(300deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luz-navidad { animation: none; }
+  .copo { display: none; }
+}
+
 #servicios {
   scroll-margin-top: 10px;
 }

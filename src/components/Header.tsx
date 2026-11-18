@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Feather } from 'lucide-react';
 import { FranjaTricolor } from './FiestasPatrias';
 import { esFiestasPatrias } from '../fiestasPatrias';
+import { GuirnaldaLuces, Gorrito } from './Navidad';
+import { esNavidad } from '../navidad';
 
 
 const Header = () => {
@@ -33,7 +35,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Feather className="w-8 h-8 text-pink-600" />
+            <span className="relative inline-flex">
+              <Feather className="w-8 h-8 text-pink-600" />
+              {esNavidad && <Gorrito className="absolute -top-3 -left-2 w-7 h-6 -rotate-12 drop-shadow-sm" />}
+            </span>
               <button 
                 onClick={() => scrollToSection('inicio')} 
                 className="text-2xl font-bold text-gray-900 hover:opacity-80 transition-opacity focus:outline-none"
@@ -145,6 +150,7 @@ const Header = () => {
         )}
       </div>
       {esFiestasPatrias && <FranjaTricolor />}
+      {esNavidad && <GuirnaldaLuces />}
     </header>
   );
 };
